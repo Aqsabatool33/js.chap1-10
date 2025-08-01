@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result Table</title>
+</head>
+<body>
+
+<script>
+    // Step 1: Take subject names
+    var sub1 = prompt("Enter name of first subject:");
+    var sub2 = prompt("Enter name of second subject:");
+    var sub3 = prompt("Enter name of third subject:");
+
+    // Step 2: Fixed total marks per subject
+    var totalMarksPerSubject = 100;
+
+    // Step 3: Get obtained marks
+    var marks1 = +prompt("Enter obtained marks for " + sub1 + ":");
+    var marks2 = +prompt("Enter obtained marks for " + sub2 + ":");
+    var marks3 = +prompt("Enter obtained marks for " + sub3 + ":");
+
+    // Step 4: Calculate total and percentage
+    var totalMarks = totalMarksPerSubject * 3;
+    var totalObtained = marks1 + marks2 + marks3;
+    var percentage = (totalObtained / totalMarks) * 100;
+
+    // Step 5: Show result in a table
+    document.write("<h2>Marksheet</h2>");
+    document.write("<table border='1' cellpadding='10'>");
+    document.write("<tr><th>Subject</th><th>Total Marks</th><th>Obtained Marks</th></tr>");
+    document.write("<tr><td>" + sub1 + "</td><td>100</td><td>" + marks1 + "</td></tr>");
+    document.write("<tr><td>" + sub2 + "</td><td>100</td><td>" + marks2 + "</td></tr>");
+    document.write("<tr><td>" + sub3 + "</td><td>100</td><td>" + marks3 + "</td></tr>");
+    document.write("<tr><th colspan='2'>Total Marks</th><td>" + totalObtained + " / " + totalMarks + "</td></tr>");
+    document.write("<tr><th colspan='2'>Percentage</th><td>" + percentage.toFixed(2) + "%</td></tr>");
+    document.write("</table>");
+</script>
+</body>
+</html>
